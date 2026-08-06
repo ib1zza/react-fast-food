@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Test from "../components/Test";
-import { Product } from "../types";
+import { IProduct } from "../types";
 
 type User = {
   name: string;
@@ -31,7 +31,7 @@ function sum(a: number, b: number): number {
 }
 
 export const HomePage: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
   const [input, setInput] = useState<string>("hello");
 
   let someVar: number = 1;

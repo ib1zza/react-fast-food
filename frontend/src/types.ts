@@ -1,4 +1,4 @@
-export interface Category {
+export interface ICategory {
   id: string;
   image: string;
   name: string;
@@ -6,7 +6,7 @@ export interface Category {
   sourceUrl: string;
 }
 
-export interface Product {
+export interface IProduct {
   categoryId: string;
   categoryName: string;
   description: string;
@@ -19,7 +19,7 @@ export interface Product {
   sourceUrl: string;
 }
 
-export interface CartItem {
-  product: Product;
+export interface ICartItem {
+  product: IProduct;
   quantity: number;
 }

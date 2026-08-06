@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import { HomePage } from './pages/HomePage';
 
 export const App: React.FC = () => {
+
+  
   return (
     <Router>
       <div className="app-container">
