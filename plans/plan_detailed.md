@@ -16,14 +16,14 @@
 
 ## 2. Управление состоянием (State Management & Custom Hooks)
 
-- [ ] **Кастомный хук:** Создать `frontend/src/hooks/useCatalog.ts` для связи UI с API.
-- [ ] **Переменные состояния:**
+- [x] **Кастомный хук:** Создать `frontend/src/hooks/useCatalog.ts` для связи UI с API.
+- [x] **Переменные состояния:**
   - `categories` (массив категорий)
   - `products` (массив товаров)
   - `selectedCategoryId` (активная категория)
   - `isLoadingCategories`, `isLoadingProducts` (флаги загрузки)
   - `error` (обработка ошибок запросов)
-- [ ] **Функция выбора:** `selectCategory(id: string | null)` для переключения активной категории.
+- [x] **Функция выбора:** `selectCategory(id: string | null)` для переключения активной категории.
 
 ---
 
