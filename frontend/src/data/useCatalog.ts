@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useCatalogStore } from './useCatalogStore';
-import { fetchCategories, fetchProducts } from './catalogApi';
+import { useCatalogStore } from '../store/useCatalogStore';
+import { fetchCategories, fetchProducts } from '../api/catalogApi';
 
 export const useCatalog = () => {
   const {
@@ -43,10 +43,7 @@ export const useCatalog = () => {
     const loadProducts = async () => {
       setLoadingProducts(true);
       setError(null);
-      if (!selectedCategoryId) {
-        setProducts([]);
-        return;
-      }
+   
 
       try {
         const data = await fetchProducts()
@@ -59,7 +56,7 @@ export const useCatalog = () => {
     };
 
     loadProducts();
-  }, [selectedCategoryId]);
+  }, []);
 
   return {
     categories,
