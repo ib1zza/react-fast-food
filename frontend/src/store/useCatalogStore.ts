@@ -1,22 +1,5 @@
 import { create } from 'zustand';
-import type { ICategory, IProduct } from '../types';
-
-
-interface CatalogState {
-  categories: ICategory[];
-  products: IProduct[];
-  selectedCategoryId: string | null;
-  isLoadingCategories: boolean;
-  isLoadingProducts: boolean;
-  error: string | null;
-
-  setCategories: (categories: ICategory[]) => void;
-  setProducts: (products: IProduct[]) => void;
-  setSelectedCategoryId: (id: string | null) => void;
-  setLoadingCategories: (v: boolean) => void;
-  setLoadingProducts: (v: boolean) => void;
-  setError: (error: string | null) => void;
-}
+import { CatalogState } from './useCatalogStore.types';
 
 export const useCatalogStore = create<CatalogState>((set) => ({
   categories: [],
@@ -33,3 +16,4 @@ export const useCatalogStore = create<CatalogState>((set) => ({
   setLoadingProducts: (v) => set({ isLoadingProducts: v }),
   setError: (error) => set({ error }),
 }));
+
