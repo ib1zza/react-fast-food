@@ -1,25 +1,25 @@
-export interface Category {
+export interface ICategory {
   id: string;
+  image: string;
   name: string;
   slug: string;
-  icon?: string;
+  sourceUrl: string;
 }
 
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  weightGrams?: number;
-  caloriesKcal?: number;
+export interface IProduct {
   categoryId: string;
+  categoryName: string;
+  description: string;
+  dishId: string;
+  id: string;
   image: string;
-  badge?: string;
-  isPopular?: boolean;
+  name: string;
+  price: number;
+  priceText: string;
+  sourceUrl: string;
 }
 
-export interface CartItem {
-  product: Product;
+export interface ICartItem {
+  product: IProduct;
   quantity: number;
-  selectedModifiers?: string[];
 }
