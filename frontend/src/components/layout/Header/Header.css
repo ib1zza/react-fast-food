@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 8px;
+    
+}
+
+.search-icon {
+    width: 32px;
+    height: 32px;
+}
