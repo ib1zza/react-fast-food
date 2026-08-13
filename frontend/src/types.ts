@@ -23,3 +23,17 @@ export interface ICartItem {
   product: IProduct;
   quantity: number;
 }
+
+export interface IOutlineButton {
+  background: string;
+  color: string;
+  children: React.ReactNode;
+  className: string;
+};
+
+export interface ISolidButton {
+  background: string;
+  color: string;
+  children: React.ReactNode;
+  className: string;
+};
