@@ -30,7 +30,7 @@ function sum(a: number, b: number): number {
   return a + b;
 }
 
-export const HomePage: React.FC = () => {
+export const TestPage: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [input, setInput] = useState<string>("hello");
 

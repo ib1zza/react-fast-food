@@ -1,9 +1,18 @@
+import { useLocation } from "react-router"
 import { Button } from "../../ui/Button/Button"
 import { Icon } from "../../ui/Icon/Icon"
 
 import './Header.css'
 
-export function ShowHeader() {
+export function Header() {
+  const {pathname} = useLocation()
+
+  console.log(pathname)
+
+  if (pathname.startsWith('/user')) {
+    return null;
+  }
+
   console.log("header is exporting successfully")
   return (
     <div className="header">
