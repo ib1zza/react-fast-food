@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 import styles from "./RegisterForm.module.css";
+import { registerUser } from "../../../api/authApi";
+import { useUser } from "../../../data/useUser";
 
 interface RegisterFormProps {
   onSwitchToLogin?: () => void;
 }
 
-export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) => {
+export const RegisterForm: React.FC<RegisterFormProps> = ({
+  onSwitchToLogin,
+}) => {
+  const userControls = useUser();
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const res = await registerUser(login, password);
+
+    if (res) {
+      localStorage.setItem("token", res.token);
+      userControls.setUser(res.user);
+    }
   };
 
   return (

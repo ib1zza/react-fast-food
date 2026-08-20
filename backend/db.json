@@ -2792,6 +2792,24 @@
       "email": "user@example.com",
       "password": "$2a$10$DRRCsy4tvriURwQEJE0JVek3qnBAax0L.mpC750HxDG.esMbVhoUq",
       "createdAt": "2026-08-20T11:22:47.463Z"
+    },
+    {
+      "id": "817025c3-0a0a-4db3-88f6-a9d5b0fd09ca",
+      "email": "user1@example.com",
+      "password": "$2a$10$YuNqJC9xeGLt3YbpWCPvBeOhx9WrXz1zwnVrVVWOQD2KFpnzZhI9i",
+      "createdAt": "2026-08-20T17:03:57.072Z"
+    },
+    {
+      "id": "e2462054-15cb-4750-b864-b4c85bfb143c",
+      "email": "user2@example.com",
+      "password": "$2a$10$u7Tz1cLgzFB0DuGHXUGfxugo/NS1UcczqXsXK2/XmoGULnB0E.pIu",
+      "createdAt": "2026-08-20T17:04:15.762Z"
+    },
+    {
+      "id": "08204a3a-e728-4ba6-8f44-4f813f0a9543",
+      "email": "test@gmail.com",
+      "password": "$2a$10$/2hBsE5zGt6knHIRNnrFg.JL5k2/dkrhtl8Xa3a0IQKj1PDgMcke6",
+      "createdAt": "2026-08-20T17:05:50.351Z"
     }
   ],
   "carts": [
