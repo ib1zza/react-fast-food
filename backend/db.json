@@ -2785,5 +2785,26 @@
     "note": "Данные доступны на главной странице; цены зависят от региона и времени.",
     "site": "Burger King Russia",
     "url": "https://burgerkingrus.ru/category/34"
-  }
+  },
+  "users": [
+    {
+      "id": "9c5d7875-f51b-4778-b487-13c6759edda7",
+      "email": "user@example.com",
+      "password": "$2a$10$DRRCsy4tvriURwQEJE0JVek3qnBAax0L.mpC750HxDG.esMbVhoUq",
+      "createdAt": "2026-08-20T11:22:47.463Z"
+    }
+  ],
+  "carts": [
+    {
+      "id": "db7673f0-10d6-4a10-b115-f90ef1a2e798",
+      "userId": "9c5d7875-f51b-4778-b487-13c6759edda7",
+      "items": [
+        {
+          "productId": "20-364-1",
+          "quantity": 2
+        }
+      ],
+      "updatedAt": "2026-08-20T11:24:23.305Z"
+    }
+  ]
 }
