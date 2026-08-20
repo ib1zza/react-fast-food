@@ -1,49 +1,33 @@
-import { useLocation } from "react-router"
-import { Button } from "../../ui/Button/Button"
-import { Icon } from "../../ui/Icon/Icon"
+import { useLocation } from "react-router";
+import { Button } from "../../ui/Button/Button";
+import { Icon } from "../../ui/Icon/Icon";
 
-import './Header.css'
+import "./Header.css";
 
 export function Header() {
-  const {pathname} = useLocation()
-
-  console.log(pathname)
-
-  if (pathname.startsWith('/user')) {
-    return null;
-  }
-
-  console.log("header is exporting successfully")
   return (
     <div className="header">
-      <div className="header-logo">
-        <button>
-          <img src="/images/logo.png" alt="Logo" />
-        </button>
-      </div>
+      <button className="header-logo">
+        <img src="/images/logo.png" alt="Logo" />
+      </button>
       <div className="header-buttons">
         <div>
           <Button variant="outline" square>
-            <Icon name="search" size={16} className="search-icon"  />
+            <Icon name="search" size={16} className="search-icon" />
           </Button>
-
-
-           
         </div>
         <div className="cart-button">
-          <Button variant="solid">
-           корзина
+          <Button variant="solid">корзина</Button>
+
+          {/* <Button variant="solid" size="s">
+            корзина
           </Button>
 
- <Button variant="solid" size='s'>
-           корзина
-          </Button>
-
-<Button variant="solid" size='l'>
-           корзина
-          </Button>
+          <Button variant="solid" size="l">
+            корзина
+          </Button> */}
         </div>
       </div>
     </div>
-  )
+  );
 }
