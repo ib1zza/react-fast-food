@@ -17,3 +17,7 @@ export interface IUser {
   email: string;
   createdAt: string;
 }
+
+export interface IAuthResponse {
+  user: IUser;
+}

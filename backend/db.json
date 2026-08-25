@@ -2810,6 +2810,18 @@
       "email": "test@gmail.com",
       "password": "$2a$10$/2hBsE5zGt6knHIRNnrFg.JL5k2/dkrhtl8Xa3a0IQKj1PDgMcke6",
       "createdAt": "2026-08-20T17:05:50.351Z"
+    },
+    {
+      "id": "683f6d54-fbf9-4a01-ba8b-2b981eaecabc",
+      "email": "test1@gmail.com",
+      "password": "$2a$10$dT9kFOlHEFk5yIc41GF14uSTsxfRA.5gqvTBH/9NJxEdeblQMii0u",
+      "createdAt": "2026-08-25T16:29:41.473Z"
+    },
+    {
+      "id": "321d2a34-94d6-4e64-822d-b3baf7958d6c",
+      "email": "test2@gmail.com",
+      "password": "$2a$10$j3Y/3GhIhOav8T3EFdB6COHBMX7rmHv0MzVK..asaqfCaYPKdeAi6",
+      "createdAt": "2026-08-25T16:50:41.022Z"
     }
   ],
   "carts": [
