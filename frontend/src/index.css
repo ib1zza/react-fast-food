@@ -8,7 +8,8 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black
+    color: black;
+    background-color: #f5ebdc;
 }
 
 .header {
@@ -28,4 +29,26 @@ body {
     gap: 4px;
     align-items: center;
 
+}
+
+.side-menu {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    margin-top: 124px;
+    height: 570px;
+    width: 220px;
+    border: 1px solid black;
+    background-color: #fcf6ec;
+    margin-left: 12%;
+    border-radius: 14px;
+    color: #765247;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.side-menu-item {
+    align-content: center;
+    border-bottom: 1px solid #f9f1e5;
+    margin-left: 27%;
+    /* до появления картинок у категорий */
 }
