@@ -14,3 +14,5 @@ export interface ISolidButton {
   children: React.ReactNode;
   className: string;
 }
+
+export type IModal = "login" | "register";

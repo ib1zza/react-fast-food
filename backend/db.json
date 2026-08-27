@@ -2822,6 +2822,12 @@
       "email": "test2@gmail.com",
       "password": "$2a$10$j3Y/3GhIhOav8T3EFdB6COHBMX7rmHv0MzVK..asaqfCaYPKdeAi6",
       "createdAt": "2026-08-25T16:50:41.022Z"
+    },
+    {
+      "id": "7e437a5e-4af7-4d2b-96c5-ea6f70b02b90",
+      "email": "testtest@gmail.com",
+      "password": "$2a$10$cckOJlW3vljm2lUCVSsYaOqdCS07hm51Hd9BtT4NM0U4Jbyvw1aRe",
+      "createdAt": "2026-08-27T13:01:56.609Z"
     }
   ],
   "carts": [

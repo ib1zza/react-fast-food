@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import styles from "./AuthModal.module.css";
 import { LoginForm } from "../LoginForm/LoginForm";
 import { RegisterForm } from "../RegisterForm/RegisterForm";
-
-export type AuthModalMode = "login" | "register";
+import { IModal } from "../../../types";
 
 export interface AuthModalProps {
   isOpen: boolean;
   onClose: () => void;
-  mode: AuthModalMode;
-  onSwitchMode: (mode: AuthModalMode) => void;
+  mode: IModal | null;
+  onSwitchMode: (mode: IModal) => void;
 }
 
 export const AuthModal: React.FC<AuthModalProps> = ({
