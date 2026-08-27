@@ -4,11 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "json-server db.json --port 4000",
-    "dev": "json-server db.json --port 4000 --watch"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.3",
     "json-server": "^1.0.0-beta.3",
-    "react-fast-food-monorepo": "file:.."
+    "jsonwebtoken": "^9.0.2",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }

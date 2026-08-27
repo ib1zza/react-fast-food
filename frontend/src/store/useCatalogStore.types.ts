@@ -14,6 +14,4 @@ export type CatalogState = {
   setLoadingCategories: (v: boolean) => void;
   setLoadingProducts: (v: boolean) => void;
   setError: (error: string | null) => void;
-}
-
- 
+};

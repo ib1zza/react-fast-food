@@ -2785,5 +2785,62 @@
     "note": "Данные доступны на главной странице; цены зависят от региона и времени.",
     "site": "Burger King Russia",
     "url": "https://burgerkingrus.ru/category/34"
-  }
+  },
+  "users": [
+    {
+      "id": "9c5d7875-f51b-4778-b487-13c6759edda7",
+      "email": "user@example.com",
+      "password": "$2a$10$DRRCsy4tvriURwQEJE0JVek3qnBAax0L.mpC750HxDG.esMbVhoUq",
+      "createdAt": "2026-08-20T11:22:47.463Z"
+    },
+    {
+      "id": "817025c3-0a0a-4db3-88f6-a9d5b0fd09ca",
+      "email": "user1@example.com",
+      "password": "$2a$10$YuNqJC9xeGLt3YbpWCPvBeOhx9WrXz1zwnVrVVWOQD2KFpnzZhI9i",
+      "createdAt": "2026-08-20T17:03:57.072Z"
+    },
+    {
+      "id": "e2462054-15cb-4750-b864-b4c85bfb143c",
+      "email": "user2@example.com",
+      "password": "$2a$10$u7Tz1cLgzFB0DuGHXUGfxugo/NS1UcczqXsXK2/XmoGULnB0E.pIu",
+      "createdAt": "2026-08-20T17:04:15.762Z"
+    },
+    {
+      "id": "08204a3a-e728-4ba6-8f44-4f813f0a9543",
+      "email": "test@gmail.com",
+      "password": "$2a$10$/2hBsE5zGt6knHIRNnrFg.JL5k2/dkrhtl8Xa3a0IQKj1PDgMcke6",
+      "createdAt": "2026-08-20T17:05:50.351Z"
+    },
+    {
+      "id": "683f6d54-fbf9-4a01-ba8b-2b981eaecabc",
+      "email": "test1@gmail.com",
+      "password": "$2a$10$dT9kFOlHEFk5yIc41GF14uSTsxfRA.5gqvTBH/9NJxEdeblQMii0u",
+      "createdAt": "2026-08-25T16:29:41.473Z"
+    },
+    {
+      "id": "321d2a34-94d6-4e64-822d-b3baf7958d6c",
+      "email": "test2@gmail.com",
+      "password": "$2a$10$j3Y/3GhIhOav8T3EFdB6COHBMX7rmHv0MzVK..asaqfCaYPKdeAi6",
+      "createdAt": "2026-08-25T16:50:41.022Z"
+    },
+    {
+      "id": "7e437a5e-4af7-4d2b-96c5-ea6f70b02b90",
+      "email": "testtest@gmail.com",
+      "password": "$2a$10$cckOJlW3vljm2lUCVSsYaOqdCS07hm51Hd9BtT4NM0U4Jbyvw1aRe",
+      "createdAt": "2026-08-27T13:01:56.609Z"
+    }
+  ],
+  "carts": [
+    {
+      "id": "db7673f0-10d6-4a10-b115-f90ef1a2e798",
+      "userId": "9c5d7875-f51b-4778-b487-13c6759edda7",
+      "items": [
+        {
+          "productId": "20-364-1",
+          "quantity": 2
+        }
+      ],
+      "updatedAt": "2026-08-20T11:24:23.305Z"
+    }
+  ]
 }

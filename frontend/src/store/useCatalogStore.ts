@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import { CatalogState } from './useCatalogStore.types';
+import { create } from "zustand";
+import { CatalogState } from "./useCatalogStore.types";
 
 export const useCatalogStore = create<CatalogState>((set) => ({
   categories: [],
@@ -16,4 +16,3 @@ export const useCatalogStore = create<CatalogState>((set) => ({
   setLoadingProducts: (v) => set({ isLoadingProducts: v }),
   setError: (error) => set({ error }),
 }));
-
