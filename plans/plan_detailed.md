@@ -9,7 +9,7 @@
 - [x] **Проверка контрактов:** Изучить структуру эндпоинтов `/categories` и `/products` в `backend/db.json`.
 - [x] **Типизация:** Настроить/актуализировать TypeScript интерфейсы `Category` и `Product` в `frontend/src/types.ts`.
 - [x] **API Клиент:** Создать модуль `frontend/src/api/catalogApi.ts` с методами:
-  - `fetchCategories()` — получение списка категорий с `http://localhost:3001/categories`
+  - `fetchCategories()` — получение списка категорий с `http://localhost:4000/categories`
   - `fetchProducts(categoryId?)` — получение списка товаров (всех или с фильтром по `categoryId`)
 
 ---

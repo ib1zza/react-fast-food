@@ -1,0 +1,45 @@
+.button {
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    padding-inline: 20px;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button_solid {
+    background-color: #f58538;
+    color: white;
+}
+
+.button_outline {
+    border: 1px solid #bba391;
+    color: #bba391;
+    background: white;
+}
+
+.button_square {
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+.button_size_s {
+    padding-inline: 12px;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.button_size_l {
+    padding-inline: 32px;
+    font-size: 18px;
+    min-height: 56px;
+}

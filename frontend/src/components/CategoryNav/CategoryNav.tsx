@@ -2,28 +2,31 @@ import { useEffect, useState } from "react";
 import { ICategory } from "../../types";
 import { fetchCategories } from "../../api/catalogApi";
 
- 
-
 const CategoriesNav: React.FC = () => {
-    const [data, setData] = useState<ICategory[]>([]);
+  const [data, setData] = useState<ICategory[]>([]);
 
-    useEffect(() => {
-        const fetchData = async() => {
-            const res = await fetchCategories();
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetchCategories();
 
-            if (res) {
-                setData(res);
-            }
-        };
+      if (res) {
+        setData(res);
+      }
+    };
 
-        fetchData();
-    },[])
+    fetchData();
+  }, []);
 
-    return (<div>
-        {data.map((item) => (
-            <div key={item.id}> {item.name} </div>
-        ))}
-    </div>);
-}
+  return (
+    <div className="side-menu">
+      {data.map((item) => (
+        <div key={item.id} className="side-menu-item">
+          <img src={item.image} className="side-menu-image" />
+          {item.name}{" "}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export { CategoriesNav };

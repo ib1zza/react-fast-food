@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "json-server db.json --port 3001",
-    "dev": "json-server db.json --port 3001 --watch"
+    "start": "json-server db.json --port 4000",
+    "dev": "json-server db.json --port 4000 --watch"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3",
