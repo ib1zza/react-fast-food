@@ -1,12 +1,145 @@
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: black
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  color: black;
+  background-color: #f5ebdc;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 124px;
+  padding-inline: auto;
+  gap: 30px;
+  justify-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 94px;
+  position: fixed;
+  top: 0;
+  background-color: #fcf6ec;
+  padding-inline: 10px;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.side-menu {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  width: 220px;
+  max-height: 570px;
+  background-color: #fcf6ec;
+  border-radius: 14px;
+  color: #765247;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  position: sticky;
+  top: 120px;
+}
+
+.side-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-inline: 10px;
+}
+
+.side-menu-item:not(:last-child) {
+  border-bottom: 1px solid #f9f1e5;
+}
+
+.side-menu-item img {
+  width: 48px;
+  height: 48px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbf6ec;
+  border-radius: 24px;
+  padding-inline: 12px;
+  padding-top: 12px;
+  min-height: 228px;
+  color: #765247;
+  font-weight: 600;
+  justify-content: end;
+}
+
+.card-image {
+  margin-block: auto;
+  max-width: 326px;
+}
+
+.card-name {
+  margin-top: 36px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.card-price-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  font-size: 18px;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 26px;
+  column-gap: 24px;
+  flex: 1;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 26px;
+  column-gap: 24px;
+  flex: 1;
+}
+
+.category-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #765247;
+  margin-bottom: 18px;
+  grid-column: 1 / -1;
+}
+
+.page__content {
+  margin-inline: auto;
+  max-width: 1280px;
 }

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { CategoriesNav } from "../components/CategoryNav/CategoryNav";
+
 import {
   AuthModal,
   AuthModalMode,
 } from "../components/auth/AuthModal/AuthModal";
 import { useUser } from "../data/useUser";
+import { ProductsList } from "../components/ProductsList";
 
 export const HomePage: React.FC = () => {
   const { user } = useUser();
@@ -35,7 +37,7 @@ export const HomePage: React.FC = () => {
       </div>
 
       <CategoriesNav />
-
+      <ProductsList />
       <AuthModal
         isOpen={isAuthOpen}
         onClose={closeAuth}

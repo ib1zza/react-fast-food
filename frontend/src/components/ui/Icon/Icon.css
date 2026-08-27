@@ -1,0 +1,7 @@
+.ui-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  fill: currentColor;
+  transition: color 0.2s ease, fill 0.2s ease;
+}

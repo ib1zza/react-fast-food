@@ -2,7 +2,7 @@ import { ICategory, IProduct } from "../types";
 
 export async function fetchCategories() {
      try {
-          const res = await fetch('http://localhost:3001/categories');
+          const res = await fetch('http://localhost:4000/categories');
           if (!res.ok) {
                throw new Error('Failed to fetch categories');
           }
@@ -15,7 +15,7 @@ export async function fetchCategories() {
 
 export async function fetchProducts() {
      try {
-          const res = await fetch('http://localhost:3001/products')
+          const res = await fetch('http://localhost:4000/products')
           if (!res.ok) {
                throw new Error('Failed to fetch products')
           }
