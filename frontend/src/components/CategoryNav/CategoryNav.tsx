@@ -21,7 +21,7 @@ const CategoriesNav: React.FC = () => {
     <div className="side-menu">
       {data.map((item) => (
         <div key={item.id} className="side-menu-item">
-          <img src={item.image} />
+          <img src={item.image} className="side-menu-image" />
           {item.name}{" "}
         </div>
       ))}

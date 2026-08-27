@@ -1,4 +1,4 @@
-import { IProduct /*, ISolidButton */ } from "../types";
+import { IProduct } from "../types";
 import { Button } from "./ui/Button/Button";
 
 export const ProductsItem = ({ product }: { product: IProduct }) => {
@@ -7,7 +7,7 @@ export const ProductsItem = ({ product }: { product: IProduct }) => {
       <img src={product.image} className="card-image" />
       <div className="card-name">{product.name}</div>
       <div className="card-price-block">
-        <div className="card-price">{product.priceText}</div>
+        <div>{product.priceText}</div>
         <Button variant="solid">Заказать</Button>
       </div>
     </div>
