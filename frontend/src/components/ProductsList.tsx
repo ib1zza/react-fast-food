@@ -20,13 +20,14 @@ export function ProductsList() {
   return (
     <div className="products-list">
       {data.map((item, index) => {
-        const isNewCategory = index === 0 || data[index - 1].categoryName !== item.categoryName;
+        const isNewCategory =
+          index === 0 || data[index - 1].categoryName !== item.categoryName;
 
         return (
           <Fragment key={item.id}>
-            {isNewCategory && <p className="category-title">
-              {item.categoryName}
-            </p>}
+            {isNewCategory && (
+              <p className="category-title">{item.categoryName}</p>
+            )}
             <ProductsItem product={item} />
           </Fragment>
         );

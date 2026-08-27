@@ -21,7 +21,6 @@ body {
     sans-serif;
   color: black;
   background-color: #f5ebdc;
-  display: flex;
 }
 
 .home-page {
@@ -63,8 +62,9 @@ body {
   font-size: 13px;
   font-weight: 600;
   flex-shrink: 0;
+  position: sticky;
+  top: 120px;
 }
-
 
 .side-menu-item {
   display: flex;
@@ -86,18 +86,18 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #FBF6EC;
+  background-color: #fbf6ec;
   border-radius: 24px;
   padding-inline: 12px;
   padding-top: 12px;
   min-height: 228px;
-  aspect-ratio: 228 / 314;
   color: #765247;
   font-weight: 600;
   justify-content: end;
 }
 
 .card-image {
+  margin-block: auto;
   max-width: 326px;
 }
 
@@ -123,10 +123,23 @@ body {
   flex: 1;
 }
 
+.category-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 26px;
+  column-gap: 24px;
+  flex: 1;
+}
+
 .category-title {
   font-size: 50px;
   font-weight: 700;
   color: #765247;
   margin-bottom: 18px;
   grid-column: 1 / -1;
+}
+
+.page__content {
+  margin-inline: auto;
+  max-width: 1280px;
 }
