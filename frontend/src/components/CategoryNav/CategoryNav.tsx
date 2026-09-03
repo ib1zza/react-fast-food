@@ -20,10 +20,14 @@ const CategoriesNav: React.FC = () => {
   return (
     <div className="side-menu">
       {data.map((item) => (
-        <div key={item.id} className="side-menu-item">
+        <a
+          key={item.id}
+          className="side-menu-item"
+          href={`#category-${item.id}`}
+        >
           <img src={item.image} className="side-menu-image" />
           {item.name}{" "}
-        </div>
+        </a>
       ))}
     </div>
   );

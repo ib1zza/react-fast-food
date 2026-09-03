@@ -26,7 +26,9 @@ export function ProductsList() {
         return (
           <Fragment key={item.id}>
             {isNewCategory && (
-              <p className="category-title">{item.categoryName}</p>
+              <p className="category-title" id={`category-${item.categoryId}`}>
+                {item.categoryName}
+              </p>
             )}
             <ProductsItem product={item} />
           </Fragment>
