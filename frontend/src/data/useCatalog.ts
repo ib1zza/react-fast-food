@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { useCatalogStore } from '../store/useCatalogStore';
-import { fetchCategories, fetchProducts } from '../api/catalogApi';
+import { useEffect } from "react";
+import { useCatalogStore } from "../store/useCatalogStore";
+import { fetchCategories, fetchProducts } from "../api/catalogApi";
 
 export const useCatalog = () => {
   const {
@@ -29,7 +29,9 @@ export const useCatalog = () => {
           setCategories(data);
         }
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Categories fetch failed');
+        setError(
+          err instanceof Error ? err.message : "Categories fetch failed",
+        );
       } finally {
         setLoadingCategories(false);
       }
@@ -39,17 +41,15 @@ export const useCatalog = () => {
   }, []);
 
   useEffect(() => {
-
     const loadProducts = async () => {
       setLoadingProducts(true);
       setError(null);
-   
 
       try {
-        const data = await fetchProducts()
+        const data = await fetchProducts();
         if (data) setProducts(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Products fetch failed');
+        setError(err instanceof Error ? err.message : "Products fetch failed");
       } finally {
         setLoadingProducts(false);
       }
