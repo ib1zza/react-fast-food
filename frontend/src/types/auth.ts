@@ -1,3 +1,5 @@
+import { ICartItem } from "./catalog";
+
 export interface IRegisterResponse {
   token: string;
   user: IUser;
@@ -13,11 +15,6 @@ export interface IAuthResponse {
   user: IUser;
 }
 
-export interface ICartItem {
-  productId: string;
-  quantity: number;
-}
-
 export interface IBackendCart {
   id: string;
   userId: string;
@@ -26,3 +23,4 @@ export interface IBackendCart {
 }
 
 export type IFrontendCart = ICartItem[];
+

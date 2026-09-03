@@ -31,7 +31,9 @@ export function Header() {
           </Button>
         </div>
         <div className="cart-button">
-          <Button variant="solid">корзина</Button>
+          <Button variant="solid" onClick={() => openAuth("cart")}>
+            корзина
+          </Button>
 
           <div style={{ display: "flex", gap: "10px", margin: "16px" }}>
             <button onClick={() => openAuth("login")}>Авторизация</button>

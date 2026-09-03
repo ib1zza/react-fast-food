@@ -36,9 +36,10 @@ export const swaggerDefinition = {
       },
       CartItem: {
         type: 'object',
-        required: ['productId', 'quantity'],
+        required: ['quantity', 'product'],
         properties: {
           productId: { type: 'string', example: '20-364-1' },
+          product: { $ref: '#/components/schemas/Product' },
           quantity: { type: 'integer', minimum: 1, example: 2 },
         },
       },

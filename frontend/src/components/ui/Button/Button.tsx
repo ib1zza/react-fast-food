@@ -1,18 +1,28 @@
+import React from "react";
 import "./Button.css";
 
-interface ButtonProps {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variant: "outline" | "solid";
   square?: boolean;
   size?: "s" | "m" | "l";
 }
 
-const Button: React.FC<ButtonProps> = (props) => {
-  const { children, variant, square, size = "m" } = props;
-
+const Button: React.FC<ButtonProps> = ({
+  children,
+  variant,
+  square,
+  size = "m",
+  className = "",
+  type = "button",
+  ...props
+}) => {
   return (
     <button
-      className={`button button_${variant} ${square ? "button_square" : ""} button_size_${size}`}
+      type={type}
+      className={`button button_${variant} ${square ? "button_square" : ""} button_size_${size} ${className}`.trim()}
+      {...props}
     >
       {children}
     </button>
@@ -20,3 +30,4 @@ const Button: React.FC<ButtonProps> = (props) => {
 };
 
 export { Button };
+
