@@ -13,6 +13,10 @@ export const useCart = () => {
     }
   }
 
+  function getFromCart(id: string) {
+    return cart.find((item) => item.productId === id);
+  }
+
   useEffect(() => {
     if (!cart.length) getCartData();
   }, []);
@@ -21,5 +25,6 @@ export const useCart = () => {
     setCart,
     cart,
     getCartData,
+    getFromCart,
   };
 };

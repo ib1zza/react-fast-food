@@ -3,9 +3,11 @@ import { ProductsItem } from "./ProductsItem";
 import { fetchProducts } from "../api/catalogApi";
 import { IProduct } from "../types";
 import { Fragment } from "react";
+import { useCart } from "../data/useCart";
 
 export function ProductsList() {
   const [data, setData] = useState<IProduct[]>([]);
+  const { getFromCart, setCart } = useCart();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +32,11 @@ export function ProductsList() {
                 {item.categoryName}
               </p>
             )}
-            <ProductsItem product={item} />
+            <ProductsItem
+              product={item}
+              cartItem={getFromCart(item.id)}
+              setCart={setCart}
+            />
           </Fragment>
         );
       })}

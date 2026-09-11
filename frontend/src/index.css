@@ -119,6 +119,13 @@ body {
   font-size: 18px;
 }
 
+.card-quantity-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 .products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

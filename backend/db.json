@@ -2848,18 +2848,18 @@
       "items": [
         {
           "productId": "20-364-1",
-          "quantity": 13
+          "quantity": 22
         },
         {
           "productId": "20-583-1",
-          "quantity": 4
+          "quantity": 5
         },
         {
           "productId": "20-10208-1",
           "quantity": 1
         }
       ],
-      "updatedAt": "2026-09-03T17:17:37.927Z"
+      "updatedAt": "2026-09-10T16:38:03.334Z"
     }
   ]
 }
