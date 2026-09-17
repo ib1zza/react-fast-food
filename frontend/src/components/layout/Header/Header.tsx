@@ -31,7 +31,9 @@ export function Header() {
         <Button variant="outline" onClick={() => openAuth("login")} className="auth-button">
           Войти
         </Button>
-        {user && <button onClick={handleLogout}>Выйти</button>}
+        {user && <Button variant="outline" onClick={handleLogout} className="auth-button">
+          Выйти
+        </Button>}
         <Button variant="solid" onClick={() => openAuth("cart")} className="cart-button">
           Корзина
         </Button>
