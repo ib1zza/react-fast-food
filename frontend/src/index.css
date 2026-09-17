@@ -37,14 +37,22 @@ body {
   justify-items: center;
 }
 
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #fcf6ec;
+  height: 94px;
+  position: fixed;
+  top: 0;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 94px;
-  position: fixed;
-  top: 0;
-  background-color: #fcf6ec;
+  height: 100%;
   padding-inline: 10px;
   align-items: center;
 }

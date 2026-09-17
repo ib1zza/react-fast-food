@@ -2828,6 +2828,24 @@
       "email": "testtest@gmail.com",
       "password": "$2a$10$cckOJlW3vljm2lUCVSsYaOqdCS07hm51Hd9BtT4NM0U4Jbyvw1aRe",
       "createdAt": "2026-08-27T13:01:56.609Z"
+    },
+    {
+      "id": "12eb7b6e-4692-444e-8fe0-3bb4187892f1",
+      "email": "test@test.com",
+      "password": "$2a$10$CJ50OOn7c3h0IsJq7pkUB.mGaeHs0dd0vZ6n2ZXGaadfQKPyglrVe",
+      "createdAt": "2026-09-17T16:06:14.800Z"
+    },
+    {
+      "id": "14ff0244-564c-4fc2-b525-a6c910444652",
+      "email": "hello@gmail.com",
+      "password": "$2a$10$/9cBJn6cG92N3EVmolmLvuBSYk1VoRGjfdtQwCBhgG.IgMA8fAnEC",
+      "createdAt": "2026-09-17T16:16:33.814Z"
+    },
+    {
+      "id": "5f531bd8-300f-4a1b-950f-9fbe73f2cd1b",
+      "email": "hello1asdjhkashd@gmail.com",
+      "password": "$2a$10$RgzMVg59qNq31SfMUNNmUuykqCaUMynt9xg8.0XY.KqCd4z2vWlae",
+      "createdAt": "2026-09-17T16:17:13.854Z"
     }
   ],
   "carts": [
@@ -2860,6 +2878,18 @@
         }
       ],
       "updatedAt": "2026-09-10T16:38:03.334Z"
+    },
+    {
+      "id": "ff2b20aa-9fb0-4330-9069-e461933db5c9",
+      "userId": "12eb7b6e-4692-444e-8fe0-3bb4187892f1",
+      "items": [],
+      "updatedAt": "2026-09-17T16:06:25.010Z"
+    },
+    {
+      "id": "781ed72f-4ebb-4d2f-800e-77c3e4ff2d6b",
+      "userId": "14ff0244-564c-4fc2-b525-a6c910444652",
+      "items": [],
+      "updatedAt": "2026-09-17T16:31:25.385Z"
     }
   ]
 }

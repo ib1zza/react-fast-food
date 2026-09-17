@@ -4,7 +4,7 @@ import "./Button.css";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant: "outline" | "solid";
+  variant: "outline" | "solid" | "transparent";
   square?: boolean;
   size?: "s" | "m" | "l";
 }
