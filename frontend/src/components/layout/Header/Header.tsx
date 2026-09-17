@@ -25,30 +25,16 @@ export function Header() {
         <img src="/images/logo.png" alt="Logo" />
       </button>
       <div className="header-buttons">
-        <div>
-          <Button variant="outline" square>
-            <Icon name="search" size={16} className="search-icon" />
-          </Button>
-        </div>
-        <div className="cart-button">
-          <Button variant="solid" onClick={() => openAuth("cart")}>
-            корзина
-          </Button>
-
-          <div style={{ display: "flex", gap: "10px", margin: "16px" }}>
-            <button onClick={() => openAuth("login")}>Авторизация</button>
-            <button onClick={() => openAuth("register")}>Регистрация</button>
-            {user && <button onClick={handleLogout}>Выйти</button>}
-          </div>
-
-          {/* <Button variant="solid" size="s">
-            корзина
-          </Button>
-
-          <Button variant="solid" size="l">
-            корзина
-          </Button> */}
-        </div>
+        <Button variant="outline" square className="search-button">
+          <Icon name="search" size={32} className="search-icon" />
+        </Button>
+        <Button variant="outline" onClick={() => openAuth("login")} className="auth-button">
+          Войти
+        </Button>
+        {user && <button onClick={handleLogout}>Выйти</button>}
+        <Button variant="solid" onClick={() => openAuth("cart")} className="cart-button">
+          Корзина
+        </Button>
       </div>
     </div>
   );
