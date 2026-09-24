@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Test, { Test2 } from "../components/Test";
 import { IProduct } from "../types";
 import { Button } from "../components/ui/Button/Button";
 
@@ -44,9 +43,7 @@ export const TestPage: React.FC = () => {
 
   return (
     <div className="home-page">
-      <Test2 count={1}>
-        <Test count={1} />
-      </Test2>
+     
 
       <Button variant="solid">test button</Button>
 

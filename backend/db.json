@@ -2866,7 +2866,7 @@
       "items": [
         {
           "productId": "20-364-1",
-          "quantity": 22
+          "quantity": 24
         },
         {
           "productId": "20-583-1",
@@ -2875,9 +2875,13 @@
         {
           "productId": "20-10208-1",
           "quantity": 1
+        },
+        {
+          "productId": "20-558-1",
+          "quantity": 7
         }
       ],
-      "updatedAt": "2026-09-10T16:38:03.334Z"
+      "updatedAt": "2026-09-24T16:28:36.790Z"
     },
     {
       "id": "ff2b20aa-9fb0-4330-9069-e461933db5c9",

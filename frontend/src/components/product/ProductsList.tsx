@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { ProductsItem } from "./ProductsItem";
-import { fetchProducts } from "../api/catalogApi";
-import { IProduct } from "../types";
+import { fetchProducts } from "../../api/catalogApi";
+import { IProduct } from "../../types";
 import { Fragment } from "react";
-import { useCart } from "../data/useCart";
+import { useCart } from "../../data/useCart";
 
 export function ProductsList() {
   const [data, setData] = useState<IProduct[]>([]);

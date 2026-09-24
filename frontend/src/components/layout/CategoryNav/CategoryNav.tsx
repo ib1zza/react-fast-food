@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ICategory } from "../../types";
-import { fetchCategories } from "../../api/catalogApi";
+import { ICategory } from "../../../types";
+import { fetchCategories } from "../../../api/catalogApi";
 
 const CategoriesNav: React.FC = () => {
   const [data, setData] = useState<ICategory[]>([]);

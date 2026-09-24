@@ -1,6 +1,6 @@
 import React from "react";
-import { CategoriesNav } from "../components/CategoryNav/CategoryNav";
-import { ProductsList } from "../components/ProductsList";
+import { CategoriesNav } from "../components/layout/CategoryNav/CategoryNav";
+import { ProductsList } from "../components/product/ProductsList";
 
 export const HomePage: React.FC = () => {
   return (

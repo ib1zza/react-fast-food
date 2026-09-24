@@ -1,9 +1,9 @@
-import { addToCart, deleteFromCart, editQuantity } from "../api/cartApi";
-import { ICartItem, IProduct } from "../types";
-import { fetchAndUpdateCart } from "../utils/fetchAndUpdateCart";
-import { Button } from "./ui/Button/Button";
+import { addToCart, deleteFromCart, editQuantity } from "../../api/cartApi";
+import { ICartItem, IProduct } from "../../types";
+import { fetchAndUpdateCart } from "../../utils/fetchAndUpdateCart";
+import { Button } from "../ui/Button/Button";
 
-export const ProductsItem = ({
+const useProductItemLogic = ({
   product,
   cartItem,
   setCart,
@@ -29,6 +29,26 @@ export const ProductsItem = ({
       fetchAndUpdateCart(() => deleteFromCart(product.id), setCart); //deleteFromCart(product.id);
     }
   }
+
+  return {
+    addtocart,
+    quantity,
+    handleIncrement,
+    handleDecrement
+  }
+}
+
+export const ProductsItem = ({
+  product,
+  cartItem,
+  setCart,
+}: {
+  product: IProduct;
+  cartItem: ICartItem | undefined;
+  setCart: (cart: ICartItem[]) => void;
+}) => {
+  
+  const {addtocart,handleDecrement,handleIncrement,quantity} = useProductItemLogic({product, cartItem, setCart})
 
   return (
     <div className="card">
