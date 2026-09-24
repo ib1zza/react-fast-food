@@ -1,11 +1,4 @@
-// {
-//   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-//   "user": {
-//     "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-//     "email": "user@example.com",
-//     "createdAt": "2026-08-20T16:50:26.255Z"
-//   }
-// }
+import { ICartItem } from "./catalog";
 
 export interface IRegisterResponse {
   token: string;
@@ -21,3 +14,13 @@ export interface IUser {
 export interface IAuthResponse {
   user: IUser;
 }
+
+export interface IBackendCart {
+  id: string;
+  userId: string;
+  items: ICartItem[];
+  updatedAt: string;
+}
+
+export type IFrontendCart = ICartItem[];
+

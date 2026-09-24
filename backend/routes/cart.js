@@ -22,6 +22,36 @@ function getOrCreateCart(db, userId) {
 }
 
 /**
+ * Helper: populate cart items with full product details
+ */
+function populateCart(db, cart) {
+  return {
+    id: cart.id,
+    userId: cart.userId,
+    items: cart.items.map((item) => {
+      const product = db.products.find((p) => p.id === item.productId);
+      return {
+        productId: item.productId,
+        product: product || {
+          id: item.productId,
+          name: 'Товар не найден',
+          price: 0,
+          priceText: '0 ₽',
+          categoryId: '',
+          categoryName: '',
+          image: '',
+          description: '',
+          dishId: '',
+          sourceUrl: '',
+        },
+        quantity: item.quantity,
+      };
+    }),
+    updatedAt: cart.updatedAt,
+  };
+}
+
+/**
  * GET /cart
  * Returns the current user's cart
  */
@@ -30,7 +60,7 @@ router.get('/', (req, res) => {
     const db = readDb();
     const cart = getOrCreateCart(db, req.user.id);
     writeDb(db);
-    return res.json(cart);
+    return res.json(populateCart(db, cart));
   } catch (err) {
     console.error('[cart GET /]', err);
     return res.status(500).json({ error: 'Internal server error' });
@@ -73,7 +103,7 @@ router.post('/items', (req, res) => {
     cart.updatedAt = new Date().toISOString();
     writeDb(db);
 
-    return res.status(201).json(cart);
+    return res.status(201).json(populateCart(db, cart));
   } catch (err) {
     console.error('[cart POST /items]', err);
     return res.status(500).json({ error: 'Internal server error' });
@@ -111,7 +141,7 @@ router.put('/items/:productId', (req, res) => {
     cart.updatedAt = new Date().toISOString();
     writeDb(db);
 
-    return res.json(cart);
+    return res.json(populateCart(db, cart));
   } catch (err) {
     console.error('[cart PUT /items/:productId]', err);
     return res.status(500).json({ error: 'Internal server error' });
@@ -138,7 +168,7 @@ router.delete('/items/:productId', (req, res) => {
     cart.updatedAt = new Date().toISOString();
     writeDb(db);
 
-    return res.json(cart);
+    return res.json(populateCart(db, cart));
   } catch (err) {
     console.error('[cart DELETE /items/:productId]', err);
     return res.status(500).json({ error: 'Internal server error' });
@@ -158,7 +188,7 @@ router.delete('/', (req, res) => {
     cart.updatedAt = new Date().toISOString();
     writeDb(db);
 
-    return res.json(cart);
+    return res.json(populateCart(db, cart));
   } catch (err) {
     console.error('[cart DELETE /]', err);
     return res.status(500).json({ error: 'Internal server error' });

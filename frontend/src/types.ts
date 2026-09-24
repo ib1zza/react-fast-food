@@ -15,4 +15,4 @@ export interface ISolidButton {
   className: string;
 }
 
-export type IModal = "login" | "register";
+export type IModal = "login" | "register" | "cart";

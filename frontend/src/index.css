@@ -37,23 +37,26 @@ body {
   justify-items: center;
 }
 
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #fcf6ec;
+  height: 94px;
+  position: fixed;
+  top: 0;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 94px;
-  position: fixed;
-  top: 0;
-  background-color: #fcf6ec;
+  height: 100%;
   padding-inline: 10px;
   align-items: center;
 }
 
-.header-buttons {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
 
 .side-menu {
   display: grid;
@@ -117,6 +120,13 @@ body {
   justify-content: space-between;
   padding-bottom: 14px;
   font-size: 18px;
+}
+
+.card-quantity-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .products-list {

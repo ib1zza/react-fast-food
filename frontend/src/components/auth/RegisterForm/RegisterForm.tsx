@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import styles from "./RegisterForm.module.css";
 import { registerUser } from "../../../api/authApi";
 import { useUser } from "../../../data/useUser";
+import { IRegisterFormProps } from "./RegisterForm.types";
 
-interface RegisterFormProps {
-  onSwitchToLogin?: () => void;
-}
-
-export const RegisterForm: React.FC<RegisterFormProps> = ({
+export const RegisterForm: React.FC<IRegisterFormProps> = ({
   onSwitchToLogin,
 }) => {
   const userControls = useUser();

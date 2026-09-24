@@ -6,16 +6,17 @@ import { DefaultLayout } from "./components/layout/DefaultLayout";
 import { TestPage } from "./pages/TestPage";
 import { HeaderlessLayout } from "./components/layout/HeaderlessLayout";
 import { AuthModal } from "./components/auth/AuthModal/AuthModal";
+import { CartModal } from "./components/cart/CartModal/CartModal";
 import { useModalStore } from "./store/useModalStore";
+import { useCart } from "./data/useCart";
 
 export const App: React.FC = () => {
-  const { user } = useUser();
-
-  console.log(user);
+  useUser();
+  const { cart } = useCart();
 
   const { modalOpened, setModalOpened } = useModalStore();
 
-  const closeAuth = () => {
+  const closeModal = () => {
     setModalOpened(null);
   };
 
@@ -34,10 +35,16 @@ export const App: React.FC = () => {
       </Router>
 
       <AuthModal
-        isOpen={!!modalOpened}
-        onClose={closeAuth}
+        isOpen={modalOpened === "login" || modalOpened === "register"}
+        onClose={closeModal}
         mode={modalOpened}
         onSwitchMode={setModalOpened}
+      />
+
+      <CartModal
+        items={cart}
+        isOpen={modalOpened === "cart"}
+        onClose={closeModal}
       />
     </div>
   );

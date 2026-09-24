@@ -20,6 +20,8 @@ export interface IProduct {
 }
 
 export interface ICartItem {
+  productId?: string;
   product: IProduct;
   quantity: number;
 }
+

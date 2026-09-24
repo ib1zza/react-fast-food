@@ -5,10 +5,14 @@ import { Icon } from "../../ui/Icon/Icon";
 import "./Header.css";
 import { useModalStore } from "../../../store/useModalStore";
 import { IModal } from "../../../types";
+import { useState } from "react";
 
 export function Header() {
   const { user } = useUser();
   const { setModalOpened } = useModalStore();
+
+  const [searchOpened, setSearchOpened] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const openAuth = (mode: IModal) => {
     setModalOpened(mode);
@@ -19,33 +23,47 @@ export function Header() {
     window.location.reload();
   };
 
-  return (
-    <div className="header">
-      <button className="header-logo">
-        <img src="/images/logo.png" alt="Logo" />
-      </button>
-      <div className="header-buttons">
-        <div>
-          <Button variant="outline" square>
-            <Icon name="search" size={16} className="search-icon" />
-          </Button>
-        </div>
-        <div className="cart-button">
-          <Button variant="solid">корзина</Button>
+  const handleOpenSearch = () => {
+    setSearchOpened(true);
+  }
 
-          <div style={{ display: "flex", gap: "10px", margin: "16px" }}>
-            <button onClick={() => openAuth("login")}>Авторизация</button>
-            <button onClick={() => openAuth("register")}>Регистрация</button>
-            {user && <button onClick={handleLogout}>Выйти</button>}
+  const handleCloseSearch = () => {
+    setSearchOpened(false);
+    setSearchQuery("");
+  }
+
+  return (
+    <div className="header-wrapper">
+      <div className="page__content header ">
+        <button className="header-logo">
+          <img src="/images/logo.png" alt="Logo" />
+        </button>
+        <div className="header-buttons">
+          <div className={`search-wrapper ${searchOpened ? "open" : ""}`}>
+
+            <Button variant="transparent" square className="search-button" onClick={handleOpenSearch}>
+              <Icon name="search" size={32} className="search-icon" />
+            </Button>
+
+            {<div className="search-input-wrapper">
+              <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="поиск" className="search-input" />
+              <Button variant="transparent" onClick={handleCloseSearch} className="search-button">
+                X
+              </Button>
+            </div>}
           </div>
 
-          {/* <Button variant="solid" size="s">
-            корзина
-          </Button>
 
-          <Button variant="solid" size="l">
-            корзина
-          </Button> */}
+
+          {!user &&<Button variant="outline" onClick={() => openAuth("login")} className="auth-button">
+            Войти
+          </Button>}
+          {user && <Button variant="outline" onClick={handleLogout} className="auth-button">
+            Выйти
+          </Button>}
+          <Button variant="solid" onClick={() => openAuth("cart")} className="cart-button">
+            Корзина
+          </Button>
         </div>
       </div>
     </div>

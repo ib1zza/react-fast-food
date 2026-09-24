@@ -30,7 +30,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  if (!isOpen || (mode !== "login" && mode !== "register")) return null;
 
   return (
     <div className={styles.overlay} onClick={onClose}>
