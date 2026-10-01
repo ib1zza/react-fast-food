@@ -4,6 +4,7 @@ import { Icon } from "../../ui/Icon/Icon";
 
 import "./Header.css";
 import { useModalStore } from "../../../store/useModalStore";
+import { useSearchStore } from "../../../store/useSearchStore";
 import { IModal } from "../../../types";
 import { useState } from "react";
 
@@ -11,7 +12,7 @@ export function Header() {
   const { user } = useUser();
   const { setModalOpened } = useModalStore();
 
-  const [searchOpened, setSearchOpened] = useState(false);
+  const { setSearchOpened } = useSearchStore()
   const [searchQuery, setSearchQuery] = useState("");
 
   const openAuth = (mode: IModal) => {
@@ -55,7 +56,7 @@ export function Header() {
 
 
 
-          {!user &&<Button variant="outline" onClick={() => openAuth("login")} className="auth-button">
+          {!user && <Button variant="outline" onClick={() => openAuth("login")} className="auth-button">
             Войти
           </Button>}
           {user && <Button variant="outline" onClick={handleLogout} className="auth-button">
