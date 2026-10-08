@@ -1,4 +1,10 @@
+import { IProduct } from "../types";
+
 export type SearchState = {
   searchOpened: boolean;
-  setSearchOpened: (type: boolean) => void;
+  searchQuery: string,
+  searchResults: IProduct[],
+  setSearchOpened: (type: boolean) => void,
+  setSearchQuery: (query: string) => void,
+  setSearchResults: (res: IProduct[]) => void,
 };
