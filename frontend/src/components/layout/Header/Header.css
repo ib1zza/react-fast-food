@@ -4,7 +4,6 @@
   width: 100%;
 }
 
-
 .header-buttons {
   display: flex;
   flex-direction: row;
@@ -30,7 +29,6 @@
 .cart-button {
   background-color: #1a8738;
   max-width: 200px;
-
 }
 
 .auth-button {
@@ -48,7 +46,8 @@
   flex-direction: row;
   width: 100%;
   max-width: 52px;
-  transition: max-width .3s ease .3s;
+  transition: max-width 0.3s ease 0.3s;
+  position: relative;
 }
 
 .search-input {
@@ -61,13 +60,13 @@
 .search-input-wrapper {
   display: flex;
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
   z-index: -1;
 }
 
 .search-wrapper.open {
   max-width: 300px;
-  transition: max-width .3s ease;
+  transition: max-width 0.3s ease;
 }
 
 .search-wrapper .search-input-wrapper {
@@ -77,9 +76,19 @@
 .search-wrapper.open .search-input-wrapper {
   opacity: 1;
   z-index: unset;
-  transition: opacity .2s ease .3s;
+  transition: opacity 0.2s ease 0.3s;
 }
 
+.search-results {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  max-height: 350px;
+  overflow: hidden;
+  overflow-y: auto;
+  background: white;
+}
 .search-item {
   display: flex;
   align-items: center;

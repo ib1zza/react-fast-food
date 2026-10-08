@@ -16,14 +16,25 @@ export function Header() {
 
   const { products } = useCatalog();
 
-  const { searchOpened, searchQuery, searchResults,
-    setSearchOpened, setSearchQuery, setSearchResults } = useSearchStore()
+  const {
+    searchOpened,
+    searchQuery,
+    searchResults,
+    setSearchOpened,
+    setSearchQuery,
+    setSearchResults,
+  } = useSearchStore();
 
   useEffect(() => {
-    const res = products.filter((item) => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
-    setSearchResults(res)
-  }, [searchQuery])
-
+    if (searchQuery === "") {
+      setSearchResults([]);
+      return;
+    }
+    const res = products.filter((item) =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
+    setSearchResults(res);
+  }, [searchQuery]);
 
   const openAuth = (mode: IModal) => {
     setModalOpened(mode);
@@ -36,12 +47,12 @@ export function Header() {
 
   const handleOpenSearch = () => {
     setSearchOpened(true);
-  }
+  };
 
   const handleCloseSearch = () => {
     setSearchOpened(false);
     setSearchQuery("");
-  }
+  };
 
   return (
     <div className="header-wrapper">
@@ -51,29 +62,57 @@ export function Header() {
         </button>
         <div className="header-buttons">
           <div className={`search-wrapper ${searchOpened ? "open" : ""}`}>
-
-            <Button variant="transparent" square className="search-button" onClick={handleOpenSearch}>
+            <Button
+              variant="transparent"
+              square
+              className="search-button"
+              onClick={handleOpenSearch}
+            >
               <Icon name="search" size={32} className="search-icon" />
             </Button>
 
             <div className="search-input-wrapper">
-              <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="поиск" className="search-input" />
-              <Button variant="transparent" onClick={handleCloseSearch} className="search-button">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="поиск"
+                className="search-input"
+              />
+              <Button
+                variant="transparent"
+                onClick={handleCloseSearch}
+                className="search-button"
+              >
                 X
               </Button>
             </div>
             <HeaderSearch />
           </div>
 
-
-
-          {!user && <Button variant="outline" onClick={() => openAuth("login")} className="auth-button">
-            Войти
-          </Button>}
-          {user && <Button variant="outline" onClick={handleLogout} className="auth-button">
-            Выйти
-          </Button>}
-          <Button variant="solid" onClick={() => openAuth("cart")} className="cart-button">
+          {!user && (
+            <Button
+              variant="outline"
+              onClick={() => openAuth("login")}
+              className="auth-button"
+            >
+              Войти
+            </Button>
+          )}
+          {user && (
+            <Button
+              variant="outline"
+              onClick={handleLogout}
+              className="auth-button"
+            >
+              Выйти
+            </Button>
+          )}
+          <Button
+            variant="solid"
+            onClick={() => openAuth("cart")}
+            className="cart-button"
+          >
             Корзина
           </Button>
         </div>
