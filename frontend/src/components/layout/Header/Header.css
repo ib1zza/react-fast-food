@@ -39,7 +39,7 @@
 }
 
 .search-wrapper {
-  border: 2px solid gray;
+  border: 2px solid rgba(128, 128, 128, 0.303);
   border-radius: 999px;
   background: white;
   display: flex;
@@ -84,17 +84,19 @@
   flex-direction: column;
   position: absolute;
   top: 50px;
-  max-height: 350px;
+  max-height: 500px;
   overflow: hidden;
   overflow-y: auto;
   background: white;
+  border-radius: 20px;
 }
+
 .search-item {
   display: flex;
   align-items: center;
   min-height: 100px;
   padding: 10px 14px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid RGB(128, 102, 88, 0.1);
   transition: background-color 0.15s ease;
 }
 
@@ -112,5 +114,16 @@
 .search-item-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-items: space-between;
+}
+
+.search-item-name {
+  color: #502616;
+  font-size: 14px;
+  justify-self: flex-start;
+}
+
+.search-item-price {
+  color: #7e5948;
+  font-size: 18px;
 }
