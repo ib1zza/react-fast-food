@@ -61,7 +61,9 @@ export function Header() {
           <img src="/images/logo.png" alt="Logo" />
         </button>
         <div className="header-buttons">
-          <div className={`search-wrapper ${searchOpened ? "open" : ""}`}>
+          <div
+            className={`search-wrapper ${searchOpened ? "open" : ""} ${searchResults.length ? "have-results" : ""}`}
+          >
             <Button
               variant="transparent"
               square
@@ -87,7 +89,7 @@ export function Header() {
                 X
               </Button>
             </div>
-            <HeaderSearch />
+            {searchResults.length > 0 && <HeaderSearch />}
           </div>
 
           {!user && (
