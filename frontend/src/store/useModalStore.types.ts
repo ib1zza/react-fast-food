@@ -1,6 +1,8 @@
-import { IModal } from "../types";
+import { IModal, IProduct } from "../types";
 
 export type ModalState = {
   modalOpened: IModal | null;
-  setModalOpened: (type: IModal | null) => void;
+  modalData: IProduct | null;
+  setModalOpened: (type: IModal | null,
+    data?: IProduct | null) => void;
 };

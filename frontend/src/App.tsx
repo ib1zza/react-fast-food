@@ -9,6 +9,7 @@ import { AuthModal } from "./components/auth/AuthModal/AuthModal";
 import { CartModal } from "./components/cart/CartModal/CartModal";
 import { useModalStore } from "./store/useModalStore";
 import { useCart } from "./data/useCart";
+import { ItemModal } from "./components/ItemModal";
 
 export const App: React.FC = () => {
   useUser();
@@ -44,6 +45,11 @@ export const App: React.FC = () => {
       <CartModal
         items={cart}
         isOpen={modalOpened === "cart"}
+        onClose={closeModal}
+      />
+
+      <ItemModal
+        isOpen={modalOpened === "item"}
         onClose={closeModal}
       />
     </div>

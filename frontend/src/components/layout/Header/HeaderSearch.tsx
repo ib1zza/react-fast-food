@@ -1,11 +1,13 @@
 import { useSearchStore } from "../../../store/useSearchStore";
+import { useModalStore } from "../../../store/useModalStore";
 
 export function HeaderSearch() {
   const { searchResults } = useSearchStore();
+  const { setModalOpened } = useModalStore();
   return (
     <div className="search-results">
       {searchResults.map((item) => (
-        <div className="search-item">
+        <div className="search-item" onClick={() => setModalOpened("item", item)}>
           <div className="search-item-img">
             <img src={item.image} alt={item.name} />
           </div>
