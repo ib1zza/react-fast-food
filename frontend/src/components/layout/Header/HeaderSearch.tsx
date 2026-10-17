@@ -8,9 +8,7 @@ export function HeaderSearch() {
     <div className="search-results">
       {searchResults.map((item) => (
         <div className="search-item" onClick={() => setModalOpened("item", item)}>
-          <div className="search-item-img">
-            <img src={item.image} alt={item.name} />
-          </div>
+          <img src={item.image} alt={item.name} className="search-item-img" />
           <div className="search-item-text">
             <div className="search-item-name">{item.name}</div>
             <div className="search-item-price">{item.priceText}</div>

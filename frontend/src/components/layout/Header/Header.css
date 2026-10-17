@@ -121,7 +121,7 @@
   border-bottom: none;
 }
 
-.search-item-img img {
+.search-item-img {
   flex: 0 0 72px;
   width: 72px;
   height: 72px;

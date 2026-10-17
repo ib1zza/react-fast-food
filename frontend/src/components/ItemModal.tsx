@@ -12,10 +12,16 @@ export const ItemModal: React.FC<ItemModalProps> = ({
   onClose,
 }) => {
   const { modalData } = useModalStore();
-  if (!isOpen) return null;
+  if (!isOpen || !modalData) return null;
   console.log(modalData)
   return (
     <div className={styles.overlay} onClick={onClose}>
+      <div className={styles.modal}>
+        <img src={modalData.image} alt="" />
+        <div className={styles.modalContent}>
+
+        </div>
+      </div>
     </div>
 
   )
