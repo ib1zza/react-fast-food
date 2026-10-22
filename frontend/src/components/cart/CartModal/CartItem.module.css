@@ -58,7 +58,8 @@
   text-overflow: ellipsis;
   margin: 0;
 }
-	.unitPrice {
+
+.unitPrice {
   font-size: 13px;
   color: #8c766b;
 }
@@ -152,20 +153,25 @@
     gap: 10px;
     padding: 10px;
   }
+
   .imageWrapper {
     width: 56px;
     height: 56px;
     min-width: 56px;
   }
+
   .name {
     font-size: 14px;
   }
+
   .controls {
     gap: 8px;
   }
+
   .priceBlock {
     min-width: 65px;
   }
+
   .totalPrice {
     font-size: 14px;
   }
